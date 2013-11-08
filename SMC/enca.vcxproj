@@ -214,6 +214,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -243,6 +251,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -273,6 +289,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -303,6 +327,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -346,6 +378,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -389,6 +429,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -431,6 +479,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -473,6 +529,14 @@ copy ..\lib\enca.h $(OutputPath)\include
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\enca.txt</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist ..\config.h (
+del ..\config.h
+)
+if exist ..\tools\encodings.h (
+del ..\tools\encodings.h
+)</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
