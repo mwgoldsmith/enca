@@ -205,7 +205,7 @@
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -243,7 +243,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -281,7 +281,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -319,7 +319,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -367,7 +367,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
     </ClCompile>
     <Link>
@@ -420,7 +420,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
     </ClCompile>
     <Link>
@@ -473,7 +473,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -523,7 +523,7 @@ del ..\tools\encodings.h
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4013;4047;4267;4334</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
