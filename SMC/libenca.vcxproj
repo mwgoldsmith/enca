@@ -43,7 +43,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="enca.def" />
+    <None Include="libenca.def" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\lib\common.c" />
@@ -102,7 +102,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FED9A26F-9738-45EE-B093-7375FA358911}</ProjectGuid>
-    <RootNamespace>enca</RootNamespace>
+    <RootNamespace>libenca</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -352,7 +352,7 @@ del ..\tools\encodings.h
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\enca.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
@@ -392,7 +392,7 @@ del ..\tools\encodings.h
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\enca.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
@@ -659,7 +659,7 @@ del ..\tools\encodings.h
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\enca.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
@@ -711,7 +711,7 @@ del ..\tools\encodings.h
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
-      <ModuleDefinitionFile>.\enca.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>

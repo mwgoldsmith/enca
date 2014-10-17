@@ -21,7 +21,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="enca.def">
+    <None Include="libenca.def">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
