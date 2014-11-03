@@ -29,3 +29,4 @@ enca-*.tar.xz
 *.tlog
 *.res
 *.manifest
+!SMC/*.h
