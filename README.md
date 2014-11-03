@@ -7,14 +7,14 @@
 
 Copyright (C) 2000-2003 David Necas (Yeti) <yeti@physics.muni.cz>
 
-Copyright (C) 2009-2013 Michal Cihar <michal@cihar.com>
+Copyright (C) 2009-2014 Michal Cihar <michal@cihar.com>
 
 ## Description
 
 Enca (Extremely Naive Charset Analyser) consists of two main components:
 
   * libenca, an encoding detection library.  It currently supports
-    Belarussian, Bulgarian, Croatian, Czech, Estonian, Hungarian, Latvian,
+    Belarusian, Bulgarian, Croatian, Czech, Estonian, Hungarian, Latvian,
     Lithuanian, Polish, Russian, Slovak, Slovene, Ukrainian, Chinese, and
     some multibyte encodings independently on language.  The API should be
     relatively stable (to be read as `it will either change only
@@ -50,7 +50,7 @@ GNU General Public License.  Please see COPYING for details.
 ## Web resources
 
 Enca can be found at http://github.com/nijel/enca/, you can download 
-tarballs from http/dl.cihar.com/enca/.
+tarballs from http://dl.cihar.com/enca/.
 
 
 ## Bugs

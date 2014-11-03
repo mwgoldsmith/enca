@@ -25,6 +25,7 @@ M4TESTS = \
 EXTRA_DIST = \
   FAQ \
   README.devel \
+  README.md \
   TODO \
   ChangeLog.prelib \
   autogen.sh \
@@ -55,7 +56,7 @@ install-data-hook:
 	cd $(DESTDIR)$(man1dir); \
 	inst1=`echo enca | sed '$(transform)'`.1; \
 	inst2=`echo enconv | sed '$(transform)'`.1; \
-	$(LN_S) $$inst1 $$inst2
+	$(LN_S) -f $$inst1 $$inst2
 
 uninstall-hook:
 	inst=`echo enconv | sed '$(transform)'`.1; \

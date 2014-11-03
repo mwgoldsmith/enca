@@ -3,7 +3,7 @@ dnl @(#) $Id: configure.ac,v 1.34 2005/12/18 12:07:46 yeti Exp $
 dnl This file is in public domain.
 dnl Process this file with autoconf to produce a configure script.
 dnl Shake before use.
-AC_INIT(Enca, 1.15, [https://github.com/nijel/enca/issues])
+AC_INIT(Enca, 1.16, [https://github.com/nijel/enca/issues])
 AC_PREREQ(2.52)
 AC_CONFIG_SRCDIR(src/enca.c)
 AC_CONFIG_MACRO_DIR([m4])
@@ -25,7 +25,7 @@ AC_CONFIG_FILES( \
   tools/Makefile)
 
 AC_CONFIG_HEADERS(config.h)
-AM_INIT_AUTOMAKE([1.8 gnits check-news dist-bzip2])
+AM_INIT_AUTOMAKE([1.8 gnits check-news dist-xz])
 AM_ACLOCAL_INCLUDE(m4)
 AM_MAINTAINER_MODE
 
@@ -49,7 +49,7 @@ AC_PATH_PROG(MKTEMP_PROG, mktemp)
 dnl With GCC, be paranoiac.  It should compile really cleanly.
 dnl Except -Wno-sign-compare, but older gcc's don't know it.
 if test "$GCC" = yes; then
-  CFLAGS="-Wall -W -pedantic $CFLAGS"
+  CFLAGS="-Wall -Wextra -W -pedantic $CFLAGS"
 fi
 
 dnl Check for various external converters.
@@ -99,15 +99,6 @@ gtk_CHECK_GTK_DOC
 
 dnl Check for good random number sources
 AC_CHECK_FILES(/dev/random /dev/urandom /dev/srandom /dev/arandom)
-
-dnl Dirty path hack.  Helps some people with badly set up search paths.
-if test "$prefix" = "NONE"; then
-  LDFLAGS="$LDFLAGS -L$ac_default_prefix/lib"
-  CPPFLAGS="$CPPFLAGS -I$ac_default_prefix/include"
-else
-  LDFLAGS="$LDFLAGS -L$prefix/lib"
-  CPPFLAGS="$CPPFLAGS -I$prefix/include"
-fi
 
 dnl Checks for libraries.
 ye_CHECK_LIBM
