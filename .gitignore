@@ -17,16 +17,3 @@ TAGS
 enca-*.tar.bz2
 enca-*.tar.gz
 enca-*.tar.xz
-
-*.suo
-*.user
-*.sdf
-*.opensdf
-*.obj
-*.pdb
-*.idb
-*.log
-*.tlog
-*.res
-*.manifest
-!SMC/*.h
