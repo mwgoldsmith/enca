@@ -1,7 +1,3 @@
-;
-; $Id$
-; 
-LIBRARY
 EXPORTS
 enca_analyser_alloc
 enca_analyser_free
