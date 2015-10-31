@@ -25,14 +25,6 @@
       <Configuration>ReleaseDLL</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="ReleaseLTO|Win32">
-      <Configuration>ReleaseLTO</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ReleaseLTO|x64">
-      <Configuration>ReleaseLTO</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -42,45 +34,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="libenca.def" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\lib\common.c" />
-    <ClCompile Include="..\lib\ctype.c" />
-    <ClCompile Include="..\lib\enca.c" />
-    <ClCompile Include="..\lib\encnames.c" />
-    <ClCompile Include="..\lib\filters.c" />
-    <ClCompile Include="..\lib\guess.c" />
-    <ClCompile Include="..\lib\lang.c" />
-    <ClCompile Include="..\lib\lang_be.c" />
-    <ClCompile Include="..\lib\lang_bg.c" />
-    <ClCompile Include="..\lib\lang_cs.c" />
-    <ClCompile Include="..\lib\lang_et.c" />
-    <ClCompile Include="..\lib\lang_hr.c" />
-    <ClCompile Include="..\lib\lang_hu.c" />
-    <ClCompile Include="..\lib\lang_lt.c" />
-    <ClCompile Include="..\lib\lang_lv.c" />
-    <ClCompile Include="..\lib\lang_pl.c" />
-    <ClCompile Include="..\lib\lang_ru.c" />
-    <ClCompile Include="..\lib\lang_sk.c" />
-    <ClCompile Include="..\lib\lang_sl.c" />
-    <ClCompile Include="..\lib\lang_uk.c" />
-    <ClCompile Include="..\lib\lang_zh.c" />
-    <ClCompile Include="..\lib\multibyte.c">
-      <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
-      <PreprocessorDefinitions>ssize_t=SSIZE_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="..\lib\pair.c" />
-    <ClCompile Include="..\lib\unicodemap.c" />
-    <ClCompile Include="..\lib\utf8_double.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\lib\enca.h" />
-    <ClInclude Include="..\lib\internal.h" />
-    <ClInclude Include="config.h" />
-    <ClInclude Include="encodings.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FED9A26F-9738-45EE-B093-7375FA358911}</ProjectGuid>
     <RootNamespace>libenca</RootNamespace>
@@ -89,74 +42,50 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
-    <PlatformToolset Condition="'$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -178,13 +107,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
@@ -194,55 +117,46 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
-    <TargetName>libencad</TargetName>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <OutDir>..\..\..\msvc32\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
-    <TargetName>libencad</TargetName>
-    <OutDir>..\..\..\msvc64\</OutDir>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
-    <TargetName>libenca</TargetName>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <OutDir>..\..\..\msvc32\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <TargetName>libenca</TargetName>
-    <OutDir>..\..\..\msvc64\</OutDir>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetName>libencad</TargetName>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <OutDir>..\..\..\msvc32\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <TargetName>libencad</TargetName>
-    <OutDir>..\..\..\msvc64\</OutDir>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\msvc32\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetName>libenca</TargetName>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <OutDir>..\..\..\msvc32\</OutDir>
+    <OutDir>$(ProjectDir)..\..\..\msvc32\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
-    <TargetName>libenca</TargetName>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <OutDir>..\..\..\msvc32\</OutDir>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc32\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <OutDir>$(ProjectDir)..\..\..\msvc32\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)..\..\..\msvc64\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <TargetName>libenca</TargetName>
-    <OutDir>..\..\..\msvc64\</OutDir>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir>$(ProjectDir)..\..\..\msvc64\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
-    <TargetName>libenca</TargetName>
-    <OutDir>..\..\..\msvc64\</OutDir>
-    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <OutDir>$(ProjectDir)..\..\..\msvc64\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <OutDir>$(ProjectDir)..\..\..\msvc64\</OutDir>
+    <IntDir>$(OutDir)obj\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <TargetName>$(ProjectName)d</TargetName>
+    <LinkIncremental />
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -251,34 +165,32 @@
       <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(OutDir)\lib\$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)lib\$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -289,13 +201,14 @@ del ..\tools\encodings.h
       <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(OutDir)\lib\$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)lib\$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -303,20 +216,20 @@ del ..\tools\encodings.h
     <Lib>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -327,36 +240,37 @@ del ..\tools\encodings.h
       <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)bin\$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)bin\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -367,35 +281,36 @@ del ..\tools\encodings.h
       <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)bin\$(TargetName).pdb</ProgramDataBaseFileName>
+      <MinimalRebuild>false</MinimalRebuild>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)bin\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -416,92 +331,32 @@ del ..\tools\encodings.h
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)lib\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
     <Lib>
       <TargetMachine>MachineX86</TargetMachine>
-    </Lib>
-    <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
-)</Command>
-    </PreBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <FloatingPointExceptions>false</FloatingPointExceptions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ExceptionHandling>false</ExceptionHandling>
-      <C99Support>true</C99Support>
-      <ForcedIncludeFiles>
-      </ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-    <Lib>
-      <TargetMachine>MachineX86</TargetMachine>
-    </Lib>
-    <Lib>
-      <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
-    </Lib>
-    <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
-mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
-    </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -522,92 +377,32 @@ del ..\tools\encodings.h
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)lib\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
     <Lib>
       <TargetMachine>MachineX64</TargetMachine>
-    </Lib>
-    <Lib>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)lib\$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
-)</Command>
-    </PreBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>HAVE_CONFIG_H;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <FloatingPointModel>Fast</FloatingPointModel>
-      <FloatingPointExceptions>false</FloatingPointExceptions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <OmitFramePointers>true</OmitFramePointers>
-      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ExceptionHandling>false</ExceptionHandling>
-      <C99Support>true</C99Support>
-      <ForcedIncludeFiles>
-      </ForcedIncludeFiles>
-      <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-    <Lib>
-      <TargetMachine>MachineX64</TargetMachine>
-    </Lib>
-    <Lib>
-      <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
-    </Lib>
-    <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
-mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
-    </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
-)
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -628,37 +423,37 @@ del ..\tools\encodings.h
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)bin\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)bin\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -679,39 +474,78 @@ del ..\tools\encodings.h
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>true</OmitFramePointers>
       <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
       <C99Support>true</C99Support>
       <ForcedIncludeFiles>
       </ForcedIncludeFiles>
       <DisableSpecificWarnings>4013;4047;4267;4334;%(DisableSpecificWarnings)</DisableSpecificWarnings>
-      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(OutDir)bin\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)bin\$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)bin\$(TargetName).lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)bin\$(TargetName).pdb</ProgramDatabaseFile>
       <ModuleDefinitionFile>.\libenca.def</ModuleDefinitionFile>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProfileGuidedDatabase>$(OutDir)bin\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-copy ..\lib\enca.h $(OutDir)\include
+      <Command>mkdir $(OutDir)include
+copy ..\..\lib\enca.h $(OutDir)include
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\enca.txt</Command>
+copy ..\..\COPYING $(OutDir)\licenses\enca.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\config.h (
-del ..\config.h
+      <Command>if exist ..\..\config.h (
+del ..\..\config.h
 )
-if exist ..\tools\encodings.h (
-del ..\tools\encodings.h
+if exist ..\..\tools\encodings.h (
+del ..\..\tools\encodings.h
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="libenca.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\lib\common.c" />
+    <ClCompile Include="..\..\lib\ctype.c" />
+    <ClCompile Include="..\..\lib\enca.c" />
+    <ClCompile Include="..\..\lib\encnames.c" />
+    <ClCompile Include="..\..\lib\filters.c" />
+    <ClCompile Include="..\..\lib\guess.c" />
+    <ClCompile Include="..\..\lib\lang.c" />
+    <ClCompile Include="..\..\lib\lang_be.c" />
+    <ClCompile Include="..\..\lib\lang_bg.c" />
+    <ClCompile Include="..\..\lib\lang_cs.c" />
+    <ClCompile Include="..\..\lib\lang_et.c" />
+    <ClCompile Include="..\..\lib\lang_hr.c" />
+    <ClCompile Include="..\..\lib\lang_hu.c" />
+    <ClCompile Include="..\..\lib\lang_lt.c" />
+    <ClCompile Include="..\..\lib\lang_lv.c" />
+    <ClCompile Include="..\..\lib\lang_pl.c" />
+    <ClCompile Include="..\..\lib\lang_ru.c" />
+    <ClCompile Include="..\..\lib\lang_sk.c" />
+    <ClCompile Include="..\..\lib\lang_sl.c" />
+    <ClCompile Include="..\..\lib\lang_uk.c" />
+    <ClCompile Include="..\..\lib\lang_zh.c" />
+    <ClCompile Include="..\..\lib\multibyte.c">
+      <ForcedIncludeFiles>BaseTsd.h</ForcedIncludeFiles>
+      <PreprocessorDefinitions>ssize_t=SSIZE_T;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\pair.c" />
+    <ClCompile Include="..\..\lib\unicodemap.c" />
+    <ClCompile Include="..\..\lib\utf8_double.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\lib\enca.h" />
+    <ClInclude Include="..\..\lib\internal.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="encodings.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
